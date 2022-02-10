@@ -8,7 +8,7 @@ document.getElementById("login-btn").addEventListener("click", function () {
         window.location.href = "bank.html";
     }
     else {
-        alert("Please use correct id and password!")
+        alert("Please use correct id(shehabnuntu@hotmail.com) and password(nadupadu)!")
     }
     emailField.value = "";
     passField.value = "";
