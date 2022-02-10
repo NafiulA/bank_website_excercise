@@ -16,12 +16,12 @@
         </h1>
     </header>
 
-    <main>
+    <main class="w-3/4 mx-auto">
         <section class="mt-8">
-            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+            <div class="grid grid-cols-3 gap-4 text-white">
                 <div class="bg-green-400 p-8 rounded">
                     <h4 class="text-2xl">Deposit</h4>
-                    <h3 class="text-4xl">$00
+                    <h3 class="text-4xl break-words">$ <span id="deposit-amount">00</span>
                     </h3>
                 </div>
                 <div class="bg-red-400 p-8 rounded">
@@ -36,7 +36,29 @@
                 </div>
             </div>
         </section>
+        <section class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-green-200 rounded">
+                    <h3 class="text-3xl text-center pt-2">Please Deposit</h3>
+                    <div class="text-center py-2">
+                        <input id="deposit-input" class="border-2 p-2 w-3/4 mx-auto my-4 rounded border-gray-400 block"
+                            type="text" placeholder="deposit amount">
+                        <button id="deposit-btn" class="bg-red-300 px-4 py-2 rounded font-bold ">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-green-200 rounded">
+                    <h3 class="text-3xl text-center pt-2">Please Withdraw</h3>
+                    <div class="text-center py-2">
+                        <input id="withdraw-input" class="border-2 p-2 w-3/4 mx-auto my-4 rounded border-gray-400 block"
+                            type="text" placeholder="Withdraw amount">
+                        <button id="withdraw-btn" class="bg-red-300 px-4 py-2 rounded font-bold ">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <script src="./assets/js/banking.js"></script>
 </body>
 
 </html>
