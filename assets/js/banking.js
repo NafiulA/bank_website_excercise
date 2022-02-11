@@ -4,12 +4,12 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
     const depositInput = document.getElementById("deposit-input");
     const newDepositAmount = depositInput.value;
 
-    const depositTotal = document.getElementById("deposit-amount");
+    const prevDepositTotal = document.getElementById("deposit-amount");
 
-    const prevDeposit = depositTotal.innerText;
+    const prevDeposit = prevDepositTotal.innerText;
     const currentDeposit = parseFloat(prevDeposit) + parseFloat(newDepositAmount);
 
-    depositTotal.innerText = currentDeposit;
+    prevDepositTotal.innerText = currentDeposit;
 
     const currentBalancetext = document.getElementById("balance-total");
     const currentBalanceValue = currentBalancetext.innerText;
@@ -22,24 +22,24 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
 
 })
 //withdraw button handle
-document.getElementById("deposit-btn").addEventListener("click", function () {
-    const depositInput = document.getElementById("deposit-input");
-    const newDepositAmount = depositInput.value;
+document.getElementById("withdraw-btn").addEventListener("click", function () {
+    const withdrawInput = document.getElementById("withdraw-input");
+    const newWithdrawAmount = withdrawInput.value;
 
-    const depositTotal = document.getElementById("deposit-amount");
+    const prevWithdrawTotal = document.getElementById("withdraw-amount");
 
-    const prevDeposit = depositTotal.innerText;
-    const currentDeposit = parseFloat(prevDeposit) + parseFloat(newDepositAmount);
+    const prevWithdraw = prevWithdrawTotal.innerText;
+    const currentWithdraw = parseFloat(prevWithdraw) + parseFloat(newWithdrawAmount);
 
-    depositTotal.innerText = currentDeposit;
+    prevWithdrawTotal.innerText = currentWithdraw;
 
     const currentBalancetext = document.getElementById("balance-total");
     const currentBalanceValue = currentBalancetext.innerText;
 
-    const newBalanceTotal = parseFloat(currentBalanceValue) + parseFloat(newDepositAmount);
+    const newBalanceTotal = parseFloat(currentBalanceValue) - parseFloat(newWithdrawAmount);
     currentBalancetext.innerText = newBalanceTotal;
 
 
-    depositInput.value = "";
+    withdrawInput.value = "";
 
 })
